@@ -24,13 +24,20 @@
         
         public Controllers()
         {
-            _initializations = new IInitialization[0];
-            _executeControllers = new IExecute[2];
-            _executeControllers[0] = new TimeRemainingController();
-            _executeControllers[1] = new InputController();
+            int i = 2;
+            _initializations = new IInitialization[i];
+            _initializations[--i] = new NPCInitialize();
+            _initializations[--i] = new CharacterInitialization();
 
-            _cleanUps = new ICleanUp[1];
-            _cleanUps[0] = new TimeRemainingCleanUp();
+            i = 3;
+            _executeControllers = new IExecute[i];
+            _executeControllers[--i] = new TimeRemainingController();
+            _executeControllers[--i] = new InputController();
+            _executeControllers[--i] = new MovingController();
+
+            i = 1;
+            _cleanUps = new ICleanUp[i];
+            _cleanUps[--i] = new TimeRemainingCleanUp();
         }
         
         #endregion

@@ -14,8 +14,8 @@ namespace ExampleTemplate
 
         public void Move(Vector3 moveDirection)
         {
-            transform.Translate(transform.right * moveDirection.x * _characterData.GetSpeed());
-            transform.Translate(transform.up * moveDirection.y * _characterData.GetSpeed());
+            moveDirection = moveDirection.normalized;
+            transform.Translate(moveDirection * _characterData.GetSpeed());
         }
     }
 }

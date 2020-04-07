@@ -14,6 +14,9 @@ namespace ExampleTemplate
             },
             {                
                 GameObjectType.Character, "Prefabs/Character/Prefabs_Character_SphereCharacter"
+            },
+            {
+                GameObjectType.Butterfly, "Prefabs/NPC/Prefabs_NPC_SphereButterfly"
             }
         };
 

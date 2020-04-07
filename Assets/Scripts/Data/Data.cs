@@ -14,8 +14,10 @@ namespace ExampleTemplate
         
         [SerializeField] private string _shakeDataPath;
         [SerializeField] private string _characterDataPath;
+        [SerializeField] private string _butterflyDataPath;
         private static ShakesData _shake;
         private static CharacterData _characterData;
+        private static ButterflyData _butterflyData;
         private static readonly Lazy<Data> _instance = new Lazy<Data>(() => Load<Data>("Data/" + typeof(Data).Name));
         
         #endregion
@@ -51,6 +53,18 @@ namespace ExampleTemplate
             }
         }
 
+        public ButterflyData Butterfly
+        {
+            get
+            {
+                if (_butterflyData == null)
+                {
+                    _butterflyData = Load<ButterflyData>("Data/" + Instance._butterflyDataPath);
+                }
+
+                return _butterflyData;
+            }
+        }
         #endregion
 
 

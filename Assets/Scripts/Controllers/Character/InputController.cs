@@ -10,7 +10,6 @@ namespace ExampleTemplate
         public InputController()
         {
             _characterData = Data.Instance.Character;
-            _characterData.Initialization();
         }
 
         #region IExecute
