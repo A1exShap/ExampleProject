@@ -11,6 +11,9 @@ namespace ExampleTemplate
         {
             {
                 GameObjectType.Canvas, "GUI/GUI_Canvas"
+            },
+            {                
+                GameObjectType.Character, "Prefabs/Character/Prefabs_Character_SphereCharacter"
             }
         };
 
